@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>AGK Technocare | IT Support, CCTV Installation & AMC Services Delhi NCR</title>
+    <meta name="description" content="AGK Technocare offers professional IT solutions in Delhi NCR, including CCTV camera installation, laptop & desktop repair, networking setups, and corporate IT AMC services. Based in Rohini.">
+    <meta name="keywords" content="CCTV installation Rohini, Laptop repair Delhi NCR, Computer AMC services Delhi, Office networking solutions, EPABX system installation Delhi">
+    <meta name="author" content="AGK Technocare">
+    <meta name="robots" content="index, follow">
+
+    <link rel="icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0056b3;
+            --secondary: #2c3e50;
+            --accent: #25D366;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f9f9f9;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        /* HEADER */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 1000;
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .logo-text h2 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .logo-text span {
+            font-size: 12px;
+            color: var(--text-light);
+            display: block;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* HERO */
+        .hero {
+            padding: 100px 8%;
+            background: linear-gradient(135deg,#f5f7fa,#c3cfe2);
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #4a5568;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-main {
+            background: var(--primary);
+            color: white;
+            margin-right: 15px;
+        }
+
+        .btn-main:hover {
+            background: #004085;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 80px 8%;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            padding: 30px;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            background: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .service-card h3 {
+            color: var(--secondary);
+            margin: 15px 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* CONTACT */
+        .contact-container {
+            display: flex;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .contact-form {
+            flex: 1.5;
+            min-width: 300px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-family: inherit;
+            box-sizing: border-box;
+        }
+
+        /* WHATSAPP */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111111;
+            color: #94a3b8;
+            padding: 40px 8%;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-box">
+            <img src="logo.png" alt="AGK Technocare Logo" class="logo">
+            <div class="logo-text">
+                <h2>AGK TECHNOCARE</h2>
+                <span>Total IT Management Solutions</span>
+            </div>
+        </div>
+        <nav aria-label="Main Navigation">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#amc">AMC</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h1>IT Support, CCTV Installation & AMC Services Delhi NCR
+            <p>AGK Technocare offers premium CCTV installation, laptop repair, office networking, and corporate IT AMC services across Delhi, Rohini, Noida, and Gurugram.</p>
+            <a href="tel:+918700869773" class="btn btn-main"><i class="fas fa-phone-alt"></i> Call Now</a>
+            <a href="https://wa.me/918700869773" class="btn btn-outline" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        </section>
+
+</article>
+        </section>
+        <section class="section" id="services">
+    <h2>Our Core IT Services</h2>
+    <p class="section-subtitle">
+        Reliable technology management tailored for small businesses and residential needs.
+    </p>
+
+    <div class="service-grid">
+        <article class="service-card">
+            <i class="fas fa-video" style="color: var(--primary); font-size: 2rem;"></i>
+            <h3>CCTV Installation</h3>
+            <p>
+                Complete HD &amp; IP camera setups for homes and commercial properties. We handle everything from indoor/outdoor camera positioning, DVR/NVR configuration, remote mobile viewing setups, and motion-detection alerts.
+            </p>
+        </article>
+
+        <article class="service-card">
+            <i class="fas fa-laptop" style="color: var(--primary); font-size: 2rem;"></i>
+            <h3>Laptop &amp; Desktop Repair</h3>
+            <p>
+                Fast diagnostics and reliable chip-level repair for all major computer brands. Our team handles broken screen replacements, motherboard troubleshooting, OS installations, malware removal, and high-speed SSD upgrades.
+                    </p>
+        </article>
+        
+        <article class="service-card">
+            <i class="fas fa-laptop" style="color: var(--primary); font-size: 2rem;"></i>
+            <h3>Printer &amp; Copier Rental Services</h3>
+            <p>
+                Affordable short-term and long-term printer rental solutions for corporate offices, events, and temporary workspaces across Delhi NCR. We supply high-speed laser printers, heavy-duty multi-function xerox copiers (MFPs), and color scanners, complete with flexible maintenance and toner management support.
+                    </p>
+        </article>
+
+        <article class="service-card">
+            <i class="fas fa-laptop" style="color: var(--primary); font-size: 2rem;"></i>
+            <h3>Computer &amp; Laptop Rental Services</h3>
+            <p>
+                Flexible short-term and long-term IT equipment rentals for corporate offices, events, startups, and remote teams across Delhi NCR. We supply high-configuration laptops, core-i5/i7 desktop, professional monitors, and units pre-configured with the software you need.
+            </p>
+        </article>
+
+        <article class="service-card">
+            <i class="fas fa-network-wired" style="color: var(--primary); font-size: 2rem;"></i>
+            <h3>Networking Solutions</h3>
+            <p>
+                End-to-end structured cabling and high-performance Local Area Network (LAN) deployment. We specialize in robust office Wi-Fi setups, router configuration, firewall deployment, and network switch maintenance.
+            </p>
+        </article>
+
+        <article class="service-card">
+            <i class="fas fa-phone-alt" style="color: var(--primary); font-size: 2rem;"></i>
+            <h3>EPABX Intercom Systems</h3>
+            <p>
+                Streamline your workplace communications with advanced intercom infrastructures. We install and configure traditional analog intercom systems as well as modern IP-PBX setups tailored for growing businesses.
+            </p>
+        </article>
+
+        <article class="service-card">
+            <i class="fas fa-fingerprint" style="color: var(--primary); font-size: 2rem;"></i>
+            <h3>Biometric Attendance &amp; Access Control Systems</h3>
+            <p>
+                Secure your premises and automate workforce management. We install and maintain advanced biometric fingerprint readers, facial recognition access control systems, magnetic door locks, and RFID card scanners integrated with payroll-ready attendance software.
+            </p>
+        </article>
+
+        <article class="service-card">
+            <i class="fas fa-cash-register" style="color: var(--primary); font-size: 2rem;"></i>
+            <h3>POS &amp; Billing Automation</h3>
+            <p>
+                Complete hardware installation and setup for retail POS machines, barcode scanners, and thermal receipt printers. We provide precise configurations, billing software connectivity mapping, and rapid hardware troubleshooting to keep your checkout counters running without delays.
+            </p>
+        </article>
+    </div>
+</section>
+
+        <section class="section" id="amc" style="background-color: var(--bg-light);">
+            <h2>Annual Maintenance Contracts (AMC)</h2>
+            <p class="section-subtitle">Eliminate sudden downtime with priority technical coverage plans.</p>
+            
+            <div class="service-grid">
+                <article class="service-card" style="border-top: 4px solid var(--primary);">
+                    <h3>Corporate IT & Computer AMC</h3>
+                    <p style="margin-bottom: 15px;">Perfect for corporate offices, small businesses, and institutions looking for dedicated tech support without the cost of an in-house IT team.</p>
+                    <ul style="padding-left: 20px; margin: 0; font-size: 0.9rem; color: var(--text-light);">
+                        <li>Regular quarterly preventive hardware maintenance</li>
+                        <li>Priority 4-hour emergency on-site response time</li>
+                        <li>Unlimited remote desktop and phone support</li>
+                        <li>Periodic network security and server health checks</li>
+                    </ul>
+                </article>
+
+                <article class="service-card" style="border-top: 4px solid var(--secondary);">
+                    <h3>CCTV Maintenance Contract</h3>
+                    <p style="margin-bottom: 15px;">Ensure your surveillance infrastructure functions perfectly 24/7/365 so you never miss a critical recording window.</p>
+                    <ul style="padding-left: 20px; margin: 0; font-size: 0.9rem; color: var(--text-light);">
+                        <li>Camera lens precision cleaning & angle tuning</li>
+                        <li>Storage drive health optimizations & backup verification</li>
+                        <li>Power supply unit (PSU) and cable connection checks</li>
+                        <li>Free temporary standby equipment during major repairs</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Why Choose AGK Technocare?</h2>
+            <p class="section-subtitle">Delivering precision IT engineering and trusted local expertise across Delhi NCR.</p>
+            
+            <div class="service-grid" style="text-align: center;">
+                <div>
+                    <i class="fas fa-user-shield" style="font-size: 2.5rem; color: var(--primary);"></i>
+                    <h3>Certified Experts</h3>
+                    <p>Highly qualified IT systems specialists managing your sensitive data assets and network connections securely.</p>
+                </div>
+                <div>
+                    <i class="fas fa-clock" style="font-size: 2.5rem; color: var(--primary);"></i>
+                    <h3>Quick Turnaround</h3>
+                    <p>We know system delays hurt operational workflow. Enjoy fast, reliable local response times across our target regions.</p>
+                </div>
+                <div>
+                    <i class="fas fa-thumbs-up" style="font-size: 2.5rem; color: var(--primary);"></i>
+                    <h3>Transparent Rates</h3>
+                    <p>Upfront honest billing quotes. We use 100% genuine hardware components with no hidden diagnostic costs.</p>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <section class="section" id="contact" style="background-color: var(--bg-light);">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">Reach out today for a custom service quotation.</p>
+                    <p style="font-size: 1.1rem; margin-bottom: 10px;"><strong>📍 Location:</strong> Rohini, Delhi NCR, India</p>
+                    <p style="font-size: 1.1rem;"><strong>📞 Contact Number:</strong> +91 8700869773</p>
+                   
+                    <p style="font-size: 1.1rem;">
+             <strong>📧 Email Id:</strong> agktechnocare@gmail.com
+
+                </div>
+
+                <div class="contact-form">
+                    <p style="margin-bottom: 15px; font-size: 14px; color: var(--text-light); line-height: 1.5;">
+                        Have a technical emergency or looking for a customized AMC quote? Fill out the quick form below. Our IT support team typically responds within 2 hours.
+                    </p>
+                    <form action="https://formspree.io/f/xvzvdbnd" method="POST">
+                        <label for="name" style="display:none;">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        
+                        <label for="email" style="display:none;">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                        
+                        <label for="phone" style="display:none;">Phone</label>
+                        <input type="text" id="phone" name="phone" placeholder="Phone Number">
+
+                        <label for="service" style="display:none;">Select Service</label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select Service Required</option>
+                            <option value="CCTV Installation & Maintenance">CCTV Installation & Maintenance</option>
+                            <option value="Laptop / Desktop Repair">Laptop / Desktop Repair</option>
+                            <option value="Corporate IT AMC Inquiry">Corporate IT AMC Inquiry</option>
+                            <option value="Network Setup & Wi-Fi Setup">Network Setup & Wi-Fi Setup</option>
+                            <option value="Intercom & EPABX Systems">Intercom & EPABX Systems</option>
+                        </select>
+
+                        <label for="message" style="display:none;">Message</label>
+                        <textarea id="message" name="message" placeholder="Please provide specific details regarding your tech issue..." rows="4"></textarea>
+
+                        <button type="submit" class="btn btn-main" style="border:none; cursor:pointer; width:100%; padding: 14px;">Submit Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" style="background-color: var(--secondary); color: #ffffff; padding: 40px 8%;">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h3 style="color: #ffffff; margin-bottom: 15px; font-size: 1.4rem;">Service Operational Coverage</h3>
+                <p style="font-size: 0.95rem; color: #cbd5e1; margin-bottom: 25px;">AGK Technocare proudly provides rapid on-site computer maintenance networks, CCTV configurations, and structural network provisioning fields throughout the following areas:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; font-size: 0.9rem;">
+                    <div>
+                        <strong style="color: #38bdf8;">📍 North & West Delhi:</strong>
+                        <p style="margin: 5px 0 0 0; color: #94a3b8;">Rohini, Pitampura, Shalimar Bagh, Paschim Vihar, Janakpuri, and Dwarka.</p>
+                    </div>
+                    <div>
+                        <strong style="color: #38bdf8;">📍 Central & South Delhi:</strong>
+                        <p style="margin: 5px 0 0 0; color: #94a3b8;">Connaught Place, Saket, Nehru Place, Karol Bagh, and Okhla Area.</p>
+                    </div>
+                    <div>
+                        <strong style="color: #38bdf8;">📍 Extended NCR Regions:</strong>
+                        <p style="margin: 5px 0 0 0; color: #94a3b8;">Noida Commercial hubs, Ghaziabad corridors, and Gurugram office networks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <a href="https://wa.me/918700869773" class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contact AGK Technocare on WhatsApp">
+        <i class="fab fa-whatsapp" style="font-size: 1.5rem;"></i> WhatsApp Chat
+    </a>
+
+    <footer>
+        <p>&copy; 2026 AGK Technocare. All Rights Reserved. Located in Rohini, Delhi NCR.</p>
+    </footer>
+
+</body>
+</html>
+
+```
